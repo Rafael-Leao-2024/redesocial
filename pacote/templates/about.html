@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+    {% if current_user.is_authenticated %}
+        <h5>{{ current_user.username.title() }}</h5>
+        <p>Quantidade de postagem {{ tamanho }}</p>
+        {% if posts %}
+            {% for post in posts %}
+                <div class="media-body">
+                    <div class="article-metadata">
+                    <a class="mr-2" href="{{ url_for('post', post_id=post.id) }}">{{ post.title }}</a>
+                    <small class="text-muted">{{ post.date_create.strftime('%Y-%B-%d') }}</small>
+                    </div>        
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% else %}
+        <h3>{{ posts }}</h3>
+    {% endif %}
+{% endblock content %}
