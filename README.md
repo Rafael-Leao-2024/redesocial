@@ -79,7 +79,7 @@ Certifique-se de ter os seguintes pacotes instalados:
   - **routes.py**: Rotas da aplicação.
   - **init.py**: Inicializa a aplicação Flask.
 - **run.py**: Arquivo para iniciar o servidor.
-- **requirements.txt**: Lista de dependências do projeto..
+- **requirements.txt**: Lista de dependências do projeto...
 
 ## Contribuição
 
