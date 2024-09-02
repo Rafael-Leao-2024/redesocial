@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 from flask_bcrypt import Bcrypt
 from flask_login import LoginManager
 from flask_mail import Mail
@@ -7,10 +8,15 @@ from flask_mail import Mail
 app = Flask(__name__)
 
 app.config['SECRET_KEY'] = '8ae56113942449645361e7e73b0e83e6'
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///project.db"
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///project.db" 
+
 db = SQLAlchemy()
+
 db.init_app(app)
+migrate = Migrate(app, db)
+
 bcrypt = Bcrypt(app)
+
 login_manager = LoginManager(app)
 
 
