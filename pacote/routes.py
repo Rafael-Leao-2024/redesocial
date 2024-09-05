@@ -27,7 +27,7 @@ def time_elapsed_since(creation_time):
     years = days // 365  # Aproximado
     
     if seconds < 60:
-        elapsed_time_str = "Agora mesmo"
+        elapsed_time_str = "Agora mesmo.."
     elif minutes < 60:
         elapsed_time_str = f"Há {int(minutes)} {'minuto' if int(minutes) == 1 else 'minutos'}"
     elif hours < 24:
