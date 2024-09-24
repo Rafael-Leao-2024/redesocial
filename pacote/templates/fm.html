@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Home Page</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,83 +14,62 @@
             height: 100vh;
         }
 
-        .login-container {
+        .home-container {
             background-color: #fff;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
-            max-width: 400px;
+            max-width: 600px;
             width: 100%;
+            text-align: center;
         }
 
-        .login-container h2 {
-            text-align: center;
+        .home-container h1 {
+            color: #28a745;
+        }
+
+        .home-container p {
+            font-size: 18px;
             margin-bottom: 20px;
         }
 
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .form-group input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
         .btn {
-            display: block;
-            width: 100%;
-            padding: 10px;
+            padding: 10px 20px;
             background-color: #28a745;
             color: #fff;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            text-decoration: none;
         }
 
         .btn:hover {
             background-color: #218838;
         }
 
-        .signup-link {
-            text-align: center;
-            margin-top: 10px;
+        .logout-link {
+            margin-top: 20px;
+            display: block;
         }
 
-        .signup-link a {
+        .logout-link a {
             color: #007bff;
             text-decoration: none;
         }
 
-        .signup-link a:hover {
+        .logout-link a:hover {
             text-decoration: underline;
         }
     </style>
 </head>
 <body>
 
-    <div class="login-container">
-        <h2>Login</h2>
-        <form action="/login" method="POST">
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <button type="submit" class="btn">Login</button>
-        </form>
-        <div class="signup-link">
-            <p>Don't have an account? <a href="/signup">Sign up</a></p>
+    <div class="home-container">
+        <h1>Welcome Home!</h1>
+        <p>You have successfully logged in.</p>
+        <a href="/dashboard" class="btn">Go to Dashboard</a>
+        <div class="logout-link">
+            <p><a href="/logout">Logout</a></p>
         </div>
     </div>
 
