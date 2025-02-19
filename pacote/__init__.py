@@ -7,7 +7,7 @@ from flask_migrate import Migrate
 
 app = Flask(__name__)
 
-app.config['SECRET_KEY'] = '8ae56113942449645361e7e73b0e83e6'
+app.config['SECRET_KEY'] = b'8ae5611394244nkbjvhyddfxfsiz9645361e7e73b0e83e6'
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///project.db" 
 
 db = SQLAlchemy()
